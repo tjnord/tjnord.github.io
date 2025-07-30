@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Xanh+Mono:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/index.css">
+    <script>
+  // Scroll to top on full page load
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
+  });
+
+  // Optional: prevent browser from restoring scroll position
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+    </script>
+
+    <title>HTML Cheat Sheet</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Cheat Sheet</h1>
+        <nav>
+            <ul>
+                <li><a href="#metadata">Metadata</a></li>
+                <li><a href="#sectioning">Sectioning</a></li>
+                <li><a href="#text">Text</a></li>
+                <li><a href="#inline_text">Inline Text</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- metadata tags section -->
+    <h3 id="metadata">Metadata</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;!DOCTYPE html&gt;</td>
+                <td>Document type declaration for the web browser to render an HTML file properly. Must be the first tag
+                    in an HTML document.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;head&gt;</td>
+                <td>Encloses metadata such as the title and style sheets.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;html&gt;</td>
+                <td>Encloses the entire HTML file.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;link&gt;</td>
+                <td>Includes links for CSS stylesheets and fonts for the HTML file.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;title&gt;</td>
+                <td>The title of the web page, shown in the browser tab.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Sectioning section -->
+    <h3 id="sectioning">Sectioning</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;article&gt;</td>
+                <td>Self-contained document such as a post, news article, or a blog.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;aside&gt;</td>
+                <td>A portion of the document that is somewhat related to the main content, such as a fun fact.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;body&gt;</td>
+                <td>Encloses the main content of the HTML file. Such as this table.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;footer&gt;</td>
+                <td>Footer info containing info on author, copyright, or links. usually at the bottom.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;header&gt;</td>
+                <td>Contains introductory information like navigation, logo, search form, and author name.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</td>
+                <td>Section headings ranging from the largest (<span class="id">&lt;h1&gt;</span>) to smallest (<span class="id">&lt;h6&gt;</span>).</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;main&gt;</td>
+                <td>Contains the main content of a document.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;nav&gt;</td>
+                <td>Represents the navigation section of the page, usually at the top or bottom.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;section&gt;</td>
+                <td>Encloses a section of a document. Not very specific and should almost always have a heading.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Text section -->
+    <h3 id="text">Text</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;div&gt;</td>
+                <td>Generic container.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;figcaption&gt;</td>
+                <td>Caption for the parent <span class="id">&lt;figure&gt;</span> element.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;figure&gt;</td>
+                <td>Self-contained content with the option for using <span class="id">&lt;figcaption&gt;</span> for a caption as a child element.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;li&gt;</td>
+                <td>An item in a list contained in an ordered list (<span class="id">&lt;ol&gt;</span>), or an unordered list (<span class="id">&lt;ul&gt;</span>).</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;ol&gt;</td>
+                <td>An ordered list represented typically with numbers.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;p&gt;</td>
+                <td>Paragraph element represented as blocks of text.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;ul&gt;</td>
+                <td>An unordered list represented typically with bullet points.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Inline text section -->
+    <h3 id="inline_text">Inline Text</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;a&gt;</td>
+                <td>Uses a <span class="attribute">href</span> attribute to create a hyperlink to a new webpage, or a section on the curent page.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;b&gt;</td>
+                <td>Makes the text <b>bold</b>. However the proper thing to use is <span class="attribute">font-weight</span> in CSS, or use the <span class="id">&lt;strong&gt;</span> element.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;br&gt;</td>
+                <td>Cause a line <br>break in the text.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;em&gt;</td>
+                <td>Cause the text to be in <em>italics</em>.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;span&gt;</td>
+                <td>Generic inline element most commonly used to include <span class="attribute">class</span> or <span class="attribute">id</span> attributes for CSS styling purposes.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;strong&gt;</td>
+                <td>Like <span class="id">&lt;b&gt;</span>, makes the text <strong>bold</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- media section -->
+    <h3 id="media">Media</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;audio&gt;</td>
+                <td>An audio file embedded into the document using the <span class="attribute">src</span> attribute.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;embed&gt;</td>
+                <td>Embeds an media into the document. Other tags are more specific and therefor should be used instead.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;img&gt;</td>
+                <td>Embeds an image into the document.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;video&gt;</td>
+                <td>Embeds a media player for video. use the <span class="attribute">controls</span> attribute for common video controls.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Tables section -->
+    <h3 id="tables">Tables</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="id">&lt;table&gt;</td>
+                <td>The parent element that encloses a table.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;tbody&gt;</td>
+                <td>The row that contain the main content of a table.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;td&gt;</td>
+                <td>Table data, contains information for one column in a row.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;tfoot&gt;</td>
+                <td>The footer for a table.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;th&gt;</td>
+                <td>Indicates the information in the row as a header.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;thead&gt;</td>
+                <td>Encloses the table's header.</td>
+            </tr>
+            <tr>
+                <td class="id">&lt;tr&gt;</td>
+                <td>Creates a row for the table.</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#metadata">Metadata</a></li>
+                <li><a href="#sectioning">Sectioning</a></li>
+                <li><a href="#text">Text</a></li>
+                <li><a href="#inline_text">Inline Text</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+            </ul>
+        </nav>
+        <p>By Trevor Nordlund</p>
+    </footer>
+</body>
+
+</html>
+<!-- C:\Users\User\dev_projects\codecademy\cheat_sheet\index.html -->
+
+       <!-- <tr>
+                <td class="id">&lt;&gt;</td>
+                <td></td>
+            </tr> -->
+
+      <!--  <h3 id="">Tags</h3>
+            <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+           </table> -->

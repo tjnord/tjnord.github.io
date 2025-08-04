@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="resources/css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Red Button</title>
+</head>
+<body id="off">
+    <button onclick="toggleBodyId()">Press Me</button>    
+    <div style="height: 200vh;"></div>
+    <audio id="siren" src="resources/audio/warning.mp3" loop preload="auto"></audio>
+    <script>
+  const siren = document.getElementById('siren');
+
+  function playSirenWithUserGesture() {
+    siren.play().catch(err => {
+      console.warn('Siren play failed:', err);
+    });
+  }
+
+  function toggleBodyId() {
+    const body = document.body;
+
+    // Toggle between "on" and "off"
+    if (body.id === "off") {
+      body.id = "on";
+
+      // Wait for user interaction to play the siren
+      document.addEventListener('click', playSirenWithUserGesture, { once: true });
+    } else {
+      body.id = "off";
+      siren.pause();
+      siren.currentTime = 0;
+    }
+  }
+</script>
+
+</body>
+</html>
+
+<!-- C:\Users\User\dev_projects\s&g's\big_red_button\index.html -->

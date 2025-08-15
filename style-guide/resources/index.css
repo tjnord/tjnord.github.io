@@ -3,13 +3,14 @@ header {
     flex-direction: column;
     align-items: center;
 }
- section {
-    background-color: white;
- }
 
- body {
+section {
+    background-color: white;
+}
+
+body {
     background-color: #F4D35E;
- }
+}
 
 h1 {
     margin: 0;
@@ -44,7 +45,7 @@ nav li {
     margin-right: 10px;
 }
 
-head a {
+nav a {
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -53,6 +54,12 @@ head a {
     padding: 5px 10px;
     border-radius: 8px;
 }
+
+nav a:hover {
+    background: linear-gradient(90deg, rgba(111, 212, 210, 1) 20%, rgba(157, 244, 255, 1) 80%);
+    cursor: pointer;
+}
+
 
 /* generic stuff */
 footer {
@@ -145,7 +152,7 @@ section {
     color: black;
 }
 
-/* working home page */
+/*home page */
 
 .tooltip-box {
     position: relative;
@@ -171,6 +178,46 @@ section {
 
 .tooltip-box:hover .tooltip {
     opacity: 1;
+}
+
+#home-header nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    background: #f2f2f2;
+    background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 20%, rgba(207, 207, 204, 1) 80%);
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#home-header nav a:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 20%, rgba(220, 220, 220, 0.8) 80%);
+}
+
+
+#home-header {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+}
+
+#home-header nav {
+    align-self: center;
+    margin-left: 0;
+}
+
+#home-header nav ul {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    gap: 20px;;
 }
 
 /* font section */

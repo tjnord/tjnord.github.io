@@ -1,0 +1,221 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ section {
+    background-color: white;
+ }
+
+ body {
+    background-color: #F4D35E;
+ }
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Mozilla Headline', serif;
+    font-size: 70px;
+}
+
+h3 {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 20PX 30PX 0PX;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+/* nav bar */
+
+nav {
+    align-self: flex-start;
+    width: 80%;
+    margin-left: calc((100% - 80%) / 2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+head a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    background: #5BC0BE;
+    background: linear-gradient(90deg, rgba(91, 192, 190, 1) 20%, rgba(127, 234, 250, 1) 80%);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* generic stuff */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.author {
+    font-family: 'Playwrite AU QLD', serif;
+    text-align: center;
+    text-decoration-line: underline overline;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+section {
+    border: 3px solid black;
+    width: 80%;
+    margin: 6px auto;
+
+}
+
+/* colors */
+
+.color-description {
+    font-family: 'Google Sans Code', sans-serif;
+    padding: 15px;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+}
+
+.color-display {
+    border: 2px solid black;
+    width: 65px;
+    height: 100px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#deep-navy {
+    color: white;
+    background-color: #1B263B;
+}
+
+#soft-teal {
+    color: black;
+    background-color: #5BC0BE;
+}
+
+#warm-sand {
+    color: black;
+    background-color: #F4D35E;
+}
+
+.gradient {
+    border: 2px solid black;
+    width: 65px;
+    height: 100px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#deep-navy-gradient {
+    background: #1B263B;
+    background: linear-gradient(to top, rgba(27, 38, 59, 1) 20%, rgba(89, 114, 186, 1) 80%);
+    color: white;
+}
+
+#soft-teal-gradient {
+    background: #5BC0BE;
+    background: linear-gradient(to top, rgba(91, 192, 190, 1) 20%, rgba(127, 234, 250, 1) 80%);
+    color: black;
+}
+
+#warm-sand-gradient {
+    background: #F4D35E;
+    background: linear-gradient(to top, rgba(244, 211, 94, 1) 20%, rgba(227, 214, 168, 1) 80%);
+    color: black;
+}
+
+/* working home page */
+
+.tooltip-box {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 125%;
+    /* above the link */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: black;
+    color: white;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.tooltip-box:hover .tooltip {
+    opacity: 1;
+}
+
+/* font section */
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.mozilla p {
+    font-family: 'Mozilla Headline';
+    padding: 15px;
+}
+
+.google-sans p {
+    font-family: 'Google Sans Code';
+    padding: 15px;
+}
+
+.playwrite p {
+    font-family: 'Playwrite AU QLD';
+    padding: 15px;
+}
+
+.noto-sans p {
+    font-family: 'Noto Sans';
+    padding: 15px;
+}
+
+/* text section */
+
+.font-section li {
+    font-family: 'Google Sans Code', sans-serif;
+    padding: 15px;
+    list-style: none;
+}
+
+.font-section h1 {
+    text-align: left;
+    padding: 20PX 30PX 0PX;
+}
+
+.font-section p {
+    padding: 20PX 30PX 0PX;
+    font-family: 'Google Sans Code', sans-serif;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Mozilla+Headline:wght@200..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="resources/index.css">
+    <title>Style Guide</title>
+</head>
+
+<body>
+    <header>
+        <h1>Style Guide</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="color.html" class="tooltip-box" data-type="color" data-items='[
+                {"text": "Deep Navy", "background": "#1B263B"},
+                {"text": "Soft Teal", "background": "#5BC0BE"},
+                {"text": "Warm Sand", "background": "#F4D35E"}
+            ]'>Color</a></li>
+
+                <li><a href="font.html" class="tooltip-box" data-type="font" data-items='[
+                {"text": "Google Sans Code", "font": "Google Sans Code"},
+                {"text": "Playwrite AU QLD", "font": "Playwrite AU QLD"},
+                {"text": "Mozilla Headline", "font": "Mozilla Headline"}
+            ]'>Font</a></li>
+
+                <li><a href="text.html" class="tooltip-box" data-type="text" data-items='[
+                {"text": "Hello"},
+                {"text": "World"},
+                {"text": "!"}
+            ]'>Text</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <script>
+        document.querySelectorAll('a.tooltip-box').forEach(link => {
+            // Create tooltip if missing
+            let tooltip = link.querySelector('.tooltip');
+            if (!tooltip) {
+                tooltip = document.createElement('span');
+                tooltip.className = 'tooltip';
+                link.appendChild(tooltip);
+            }
+
+            const type = link.getAttribute('data-type');
+            const items = JSON.parse(link.getAttribute('data-items'));
+
+            let index = 0;
+            let intervalId = null;
+
+            link.addEventListener('mouseenter', () => {
+                applyTooltip(tooltip, items[0], type);
+                index = 1;
+
+                intervalId = setInterval(() => {
+                    applyTooltip(tooltip, items[index], type);
+                    index = (index + 1) % items.length;
+                }, 2000);
+            });
+
+            link.addEventListener('mouseleave', () => {
+                clearInterval(intervalId);
+                index = 0;
+                applyTooltip(tooltip, items[0], type);
+            });
+        });
+
+        function applyTooltip(tooltip, item, type) {
+            tooltip.textContent = item.text;
+            tooltip.style.backgroundColor = '';
+            tooltip.style.fontFamily = '';
+
+            if (type === "color") {
+                tooltip.style.backgroundColor = item.background;
+            } else if (type === "font") {
+                tooltip.style.fontFamily = item.font;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
